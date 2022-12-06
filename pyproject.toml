@@ -1,0 +1,42 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "django-autodisco"
+version = "0.1.0"
+description = "Django autodiscover modules utils"
+authors = ["Matthieu Etchegoyen <etchegom@gmail.com>"]
+maintainers = ["Matthieu Etchegoyen <etchegom@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/etchegom/django-fsm-admin-lite"
+repository = "https://github.com/etchegom/django-fsm-admin-lite"
+documentation = "https://github.com/etchegom/django-fsm-admin-lite"
+keywords = ["django", "fsm"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4",
+    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.1",
+    "Natural Language :: English",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+packages = [{include = "autodisco"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+Django = "^4.1.4"
+black = {version = "^22.10.0", allow-prereleases = true}
+
