@@ -18,11 +18,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "autodisco",
-    "app_one",
-    "app_two",
 ]
 
-AUTODISCO_MODULES = ["receivers", "dummy_module"]
+AUTODISCO_MODULES = []
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -34,7 +32,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "sample_app.urls"
+ROOT_URLCONF = "tests.urls"
 
 TEMPLATES = [
     {
