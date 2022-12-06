@@ -1,42 +1,72 @@
 [build-system]
-requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]
 
 [tool.poetry]
-name = "django-autodisco"
-version = "0.1.0"
-description = "Django autodiscover modules utils"
 authors = ["Matthieu Etchegoyen <etchegom@gmail.com>"]
-maintainers = ["Matthieu Etchegoyen <etchegom@gmail.com>"]
-license = "MIT"
-readme = "README.md"
-homepage = "https://github.com/etchegom/django-fsm-admin-lite"
-repository = "https://github.com/etchegom/django-fsm-admin-lite"
-documentation = "https://github.com/etchegom/django-fsm-admin-lite"
-keywords = ["django", "fsm"]
 classifiers = [
-    "Environment :: Web Environment",
-    "Framework :: Django",
-    "Framework :: Django :: 3.2",
-    "Framework :: Django :: 4",
-    "Framework :: Django :: 4.0",
-    "Framework :: Django :: 4.1",
-    "Natural Language :: English",
-    "License :: OSI Approved :: MIT License",
-    "Intended Audience :: Developers",
-    "Operating System :: OS Independent",
-    "Programming Language :: Python :: 3 :: Only",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
+  "Environment :: Web Environment",
+  "Framework :: Django",
+  "Framework :: Django :: 3.2",
+  "Framework :: Django :: 4",
+  "Framework :: Django :: 4.0",
+  "Framework :: Django :: 4.1",
+  "Natural Language :: English",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
 ]
+description = "Django autodiscover modules utils"
+documentation = "https://github.com/etchegom/django-fsm-admin-lite"
+homepage = "https://github.com/etchegom/django-fsm-admin-lite"
+keywords = ["django", "fsm"]
+license = "MIT"
+maintainers = ["Matthieu Etchegoyen <etchegom@gmail.com>"]
+name = "django-autodisco"
 packages = [{include = "autodisco"}]
+readme = "README.md"
+repository = "https://github.com/etchegom/django-fsm-admin-lite"
+version = "0.1.0"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+django = "^3.2 || ^4.0 || ^4.1 || ^4.2"
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+black = "^22.8.0"
+isort = "^5.10.1"
 
 [tool.poetry.group.dev.dependencies]
-Django = "^4.1.4"
-black = {version = "^22.10.0", allow-prereleases = true}
+pytest = "^7.2.0"
+pytest-django = "^4.5.2"
 
+[tool.black]
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | build
+  | dist
+)/
+'''
+include = '\.pyi?$'
+line-length = 100
+skip-magic-trailing-comma = "false"
+
+[tool.isort]
+add_imports = ["from __future__ import annotations"]
+default_section = "FIRSTPARTY"
+float_to_top = true
+force_grid_wrap = 0
+include_trailing_comma = true
+known_third_party = ["django"]
+line_length = 100
+multi_line_output = 3
+sections = ["FUTURE", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
+skip_glob = [".venv"]
+use_parentheses = true

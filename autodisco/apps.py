@@ -1,6 +1,8 @@
+from __future__ import annotations
+
 from django.apps import AppConfig
-from django.utils.module_loading import autodiscover_modules
 from django.conf import settings
+from django.utils.module_loading import autodiscover_modules
 
 
 class AutodiscoConfig(AppConfig):
