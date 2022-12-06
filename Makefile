@@ -20,3 +20,6 @@ clean-db:
 	@rm -f sample_app/db.sqlite3
 
 example: clean-db install migrate create_super_user runserver
+
+tests: install
+	@poetry run pytest
