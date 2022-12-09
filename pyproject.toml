@@ -31,7 +31,7 @@ name = "django-autodisco"
 packages = [{include = "autodisco"}]
 readme = "README.md"
 repository = "https://github.com/etchegom/django-fsm-admin-lite"
-version = "0.1.0"
+version = "0.1.1"
 
 [tool.poetry.dependencies]
 django = "^3.2 || ^4.0 || ^4.1 || ^4.2"
