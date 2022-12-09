@@ -57,4 +57,4 @@ jobs:
       - name: Run python tests
         run: |
           source .venv/bin/activate
-          pytest
+          cd tests && pytest --ds=settings

@@ -10,6 +10,10 @@ I am used to grouping signal connectors and receivers in a module called `receiv
 
 ## Installation
 
+```
+pip install django-autodisco
+```
+Or, for the latest git version
 ```bash
 python -m pip install 'django-autodisco @ git+https://github.com/etchegom/django-autodisco.git'
 ```
