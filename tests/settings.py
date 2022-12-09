@@ -18,9 +18,12 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "autodisco",
+    "app_one",
+    "app_two",
 ]
 
-AUTODISCO_MODULES = []
+AUTODISCO_MODULES = ["receivers", "dummy_module"]
+AUTODISCO_APPS = None
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -32,7 +35,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "tests.urls"
+ROOT_URLCONF = "urls"
 
 TEMPLATES = [
     {
@@ -49,8 +52,6 @@ TEMPLATES = [
         },
     },
 ]
-
-WSGI_APPLICATION = "sample_app.wsgi.application"
 
 DATABASES = {
     "default": {
